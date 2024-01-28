@@ -4,6 +4,9 @@
       { "src": "./index.js", "use": "@vercel/node" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/" }
+      { "src": "/(.*)", "dest": "/" },
+      { "src": "/(.*)", "dest": "/device-info" },
+      { "src": "/(.*)", "dest": "/memory-info" },
+      { "src": "/(.*)", "dest": "/flame-info" }
     ]
   }  
