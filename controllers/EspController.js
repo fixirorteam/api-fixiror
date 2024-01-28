@@ -3,7 +3,7 @@ const AdminConfig = require('../config/Firebase')
 
 const getDeviceInfo = (req, res) => {
   try {
-    const dataRef = AdminConfig.database().ref('/device_info');
+    const dataRef = AdminConfig.database().ref('/device_info/about');
 
     // Set header untuk SSE
     res.setHeader('Content-Type', 'text/event-stream');
@@ -35,7 +35,7 @@ const getDeviceInfo = (req, res) => {
 
 const getMemoryInfo = (req, res) => {
   try {
-    const dataRef = AdminConfig.database().ref('/memory');
+    const dataRef = AdminConfig.database().ref('/device_info/memory');
 
     // Set header untuk SSE
     res.setHeader('Content-Type', 'text/event-stream');
@@ -67,7 +67,7 @@ const getMemoryInfo = (req, res) => {
 
   const getFlameSensor = (req, res) => {
     try {
-      const dataRef = AdminConfig.database().ref('/flame_sensor/zone_1');
+      const dataRef = AdminConfig.database().ref('/device_info/flame_sensor/zone_1');
   
       // Set header untuk SSE
       res.setHeader('Content-Type', 'text/event-stream');
